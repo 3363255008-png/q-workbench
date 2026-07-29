@@ -1,0 +1,7 @@
+# secrets (kept out of repo)
+.secrets/
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+*.log
