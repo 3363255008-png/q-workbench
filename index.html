@@ -305,6 +305,7 @@
     <div class="nav-item" data-type="ai" onclick="switchMod('ai')"><div class="badge">A</div>🤖 AI 玩家</div>
     <div class="nav-item" data-type="news" onclick="switchMod('news')"><div class="badge">闻</div>📰 资讯雷达</div>
     <div class="nav-item" data-type="media" onclick="switchMod('media')"><div class="badge">营</div>📱 运营秘籍</div>
+  <div class="nav-item" data-type="english" onclick="switchMod('english')"><div class="badge">英</div>📖 英文阅读</div>
     <div class="nav-item" data-type="watch" onclick="switchMod('watch')"><div class="badge">剧</div>🍿 追剧计划</div>
     <div class="nav-item" data-type="finance" onclick="switchMod('finance')"><div class="badge">钱</div>💰 理财记账</div>
     <div class="nav-item" data-type="travel" onclick="switchMod('travel')"><div class="badge">行</div>🧳 出行计划</div>
@@ -328,7 +329,6 @@
     <button class="tab" data-tab="home" onclick="switchMod('home')"><span class="tab-emoji">🌞</span><span class="tab-l">今日</span></button>
     <button class="tab" data-tab="work" onclick="switchMod('work')"><span class="tab-emoji">💼</span><span class="tab-l">工作</span></button>
     <button class="tab" data-tab="vitality" onclick="switchMod('vitality')"><span class="tab-emoji">🍃</span><span class="tab-l">健康</span></button>
-    <button class="tab" data-tab="learn" onclick="switchMod('learn')"><span class="tab-emoji">📚</span><span class="tab-l">学习</span></button>
     <button class="tab" data-tab="watch" onclick="switchMod('watch')"><span class="tab-emoji">🍿</span><span class="tab-l">追剧</span></button>
     <button class="tab" data-tab="finance" onclick="switchMod('finance')"><span class="tab-emoji">💰</span><span class="tab-l">理财</span></button>
     <button class="tab" data-tab="travel" onclick="switchMod('travel')"><span class="tab-emoji">🧳</span><span class="tab-l">出行</span></button>
@@ -768,9 +768,6 @@ function renderLearning(type){
   const user=state[cfg.user]||[];
   const done=user.filter(i=>i.done).length;
   let h=`<div class="card" style="--c:${cfg.accent}">
-    <div class="subtabs">`;
-  h+=LEARN.map(l=>`<button class="subtab ${l.key===type?'on':''}" style="--c:${l.accent}" onclick="switchMod('${l.key}')">${MODS[l.key].emoji} ${l.name}</button>`).join('');
-  h+=`</div>
     <div class="card-head" style="margin-top:-4px;"><h2>${MODS[cfg.key].emoji} ${cfg.name}</h2><span class="prog">我的 ${done}/${user.length} 已掌握</span></div>`;
   if(window.SEED){
     cfg.seeds.forEach((sk,idx)=>{
