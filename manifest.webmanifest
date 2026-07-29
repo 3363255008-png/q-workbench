@@ -1,0 +1,19 @@
+{
+  "name": "Q 的个人工作台",
+  "short_name": "工作台",
+  "description": "每日工作 · 运动 · 学习 · 追剧 一体化个人成长工作台",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f3f7f6",
+  "theme_color": "#14b8a6",
+  "icons": [
+    {
+      "src": "./icon.png",
+      "sizes": "192x192 512x512 1024x1024",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
